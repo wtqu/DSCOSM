@@ -24,6 +24,6 @@ RMSE_DSCOSM = 0;
 for i = 1:length(out_DSCOSM.idx_block)
     Ai = A(:,out_DSCOSM.idx_block{i})';
     [~,mi] = size(Ai);
-    RMSE_DSCOSM = RMSE_DSCOSM + sqrt(norm(Ai*out_DSCOSM.Y-Ai*data.X_ture,'fro')^2/(mi*p));
+    RMSE_DSCOSM = RMSE_DSCOSM + sqrt(norm(Ai*out_DSCOSM.Y-B,'fro')^2/(mi*p));
 end
 
